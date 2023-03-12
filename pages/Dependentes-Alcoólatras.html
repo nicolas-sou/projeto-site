@@ -135,5 +135,55 @@ Em resumo, a clínica de recuperação pode ser uma boa opção para o tratament
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
         <script src="../js/jquery.mask.min.js"></script>
         <script src="/js/main.js"></script>
+        <script>
+            $(".testmonial_slider_area").owlCarousel({
+            autoplay: true,
+            slideSpeed:1000,
+            items : 1,
+            loop: true,
+            nav:true,
+            navText:['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+            margin: 30,
+            dots: true,
+            responsive:{
+                320:{
+                    items:1
+                },
+                767:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+            
+        });
+        $('#telefone').mask('(00) 00000-0000', {
+            placeholder: '(--) XXXXX-XXXX *'
+            });
+
+            $('form').validate({
+            rules: {
+            nome: {
+                required: true
+            },
+            email: {
+                required: true,
+                email:true
+            },
+            telefone: {
+                required: true
+            },
+            },
+            });
+
+            $('.navbar nav ul li a ').click(function(){
+            $('.navbar nav ul li a').removeClass('active');
+            $(this).addClass('active');
+            });
+    </script>
 </body>
 </html>
